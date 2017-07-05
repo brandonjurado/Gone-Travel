@@ -1,0 +1,15 @@
+@import "../partials/all";
+
+.flight-payment{
+	background-image: url("../../../images/general/lsd-pattern.png");
+	height: 100%;
+
+	.panel{
+		margin-top: 40px;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 700px;
+		box-shadow: 0px 0px 5px 5px rgba(10, 10, 10, 0.1);
+
+	}
+}

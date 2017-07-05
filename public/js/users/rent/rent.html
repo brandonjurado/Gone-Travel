@@ -1,0 +1,32 @@
+<section class="rentals">
+    <link rel="stylesheet" href="../public/css/sass-output/user/rent.css" />
+    <div class="rentals-section container">
+	    <div class="alert alert-info">
+	    	Limited car rentals at this time
+	    </div>
+    </div>
+
+    <div id="popularHotelsTab" class="container tab-pane fade in active">
+	    <div class="card-grid-holder row">
+	        <!-- cards -->
+	        <div class="cards-grid" data-bind="foreach: rentals">
+	          <div class="col-sm-4 center-block card">
+	              <div class="card-image">
+	                  <div class="room-image">
+	                    <p data-bind="text: name"></p>
+	                  </div>
+	              </div>
+	              <div class="card-content">
+
+	                 <p data-bind="text: location"></p>
+	              </div>
+	              <div class="card-action">
+	                  <a data-bind="click: function($index){openHotelPaymentsView($index)}"><span class="fa fa-book"></span> Rent Car</a>
+	                  <a><p data-bind="text: price"></p></a>
+	              </div>
+	          </div>
+	        </div>
+	        <!-- end card -->
+	    </div>
+	</div>
+</section>

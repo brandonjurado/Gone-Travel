@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,QAAQ;EACJ,IAAI,EAAE,IAAI;EACV,MAAM,EAAE,IAAI;EACZ,QAAQ,EAAE,QAAQ;EAMlB,eAAM;IACF,UAAU,EAAE,IAAI;IAEhB,6BAAa;MACT,UAAU,EAAE,WAAW;MACvB,UAAU,EAAE,IAAI;MAChB,MAAM,EAAE,eAAe;MACvB,aAAa,EAAE,IAAI;MAEnB,oDAAsB;QAClB,KAAK,EAAE,KAAK",
+"sources": ["../../sass/user/flights.scss"],
+"names": [],
+"file": "flights.css"
+}

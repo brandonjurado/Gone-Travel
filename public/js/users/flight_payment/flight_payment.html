@@ -1,0 +1,65 @@
+<section class="flight-payment">
+    <link rel="stylesheet" href="../public/css/sass-output/user/flight_payments.css" />
+	<div class="container-fluid">
+		<div class="panel puffin">
+			<div class="panel-heading">
+				<h4><span class="fa fa-lock"></span> Payment Summary</h4>
+				<p>Please fill out the following fields</p>
+			</div>
+			<div class="panel-body">
+				<div class="flight-options">
+					<form class="form">
+						<div class="list-group">
+                            <a class="list-group-item list-group-item-action">
+                                <div class="col-sm-2 vcenter airline-image">
+                                    <span class="fa fa-plane"></span>
+                                </div>
+                                <div class="col-sm-8 vcenter airline-data">
+                                    <div class="airline-data-heading">
+                                        <p data-bind="text: flightNumber" class="col-sm-3 list-group-item-text"></p>
+                                        <p data-bind="text: price" class="col-sm-9 list-group-item-text"></p>
+                                    </div>
+                                    <div class="flight-route">
+                                        <div data-bind="text: departureAirport" class="origin-airport-text list-group-item-text"></div>
+                                        <div class="route-arrow">
+                                            <span class="fa fa-arrow-right"></span>
+                                            <span class="fa fa-arrow-right"></span>
+                                            <span class="fa fa-arrow-right"></span>
+                                        </div>
+                                        <div data-bind="text: arrivalAirport" class="destination-airport-text list-group-item-text"></div>
+                                    </div>
+                                </div>
+                            </a>
+                    	</div>
+					</form>
+				</div>
+				<div class="payment-options">
+					<form class="form">
+						 <p data-bind="visible: hasError, html: generateErrorHtml, animate: { animation: 'pulse', state: hasError}" class="form-control form-error"></p>
+						<div class="form-group">
+                            <div class="form-group">
+                                <label >Full Name</label>
+                               	 <input data-bind="value: name" class="form-control"  />
+                            </div>
+                            <div class="form-group">
+                            	<label >Card Number</label>
+                                <input data-bind="value: cardNumber" class="form-control"  />
+                            </div>
+                            <div class="form-group">
+                            	<label>Expiration Date</label>
+                                <input data-bind="value: expirationDate" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                            	<label >Security Code (3 on back)</label>
+                                <input data-bind="value: securityCode" class="form-control" />
+                            </div>
+                        </div>
+					</form>
+				</div>
+			</div>
+			<div class="panel-footer">
+				<button data-bind="click: validate" class="btn btn-success">Submit</button>
+			</div>
+		</div>
+	</div>
+</section>

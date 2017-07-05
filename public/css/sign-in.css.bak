@@ -1,0 +1,38 @@
+
+<style>
+
+head{
+
+}
+
+body{
+  font-family: Helvetica;
+  margin: 0;
+  padding: 0;
+  background-image: url("city-backdrop.jpg");
+  background-size: cover;
+}
+
+h1{
+  color: #341A94;
+  height:85px;
+  margin-top: auto;
+  background-color: #4B4B4B;
+}
+
+h2 {
+    color:#000000;
+    text-align: center;
+}
+
+div {
+    background-color: #878787;
+    opacity: .75;
+    font-size: 15px;
+    margin: auto;
+    width: 50%;
+    padding: 5px;
+}
+
+
+</style>

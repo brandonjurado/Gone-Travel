@@ -1,0 +1,123 @@
+$primaryColor: #ededed;
+$customGreen: #4caf50;
+$customDarkGreen: #4F9C45;
+$customRed: #cd3948;
+$customGrey: #ddd;
+$sidePanelBackground: #f5f5f5;
+
+@import "../partials/overlay";
+
+.form-notification{   
+  border-radius: 2px;
+  color: white;
+  
+    // animation
+  -moz-animation-duration: 3s;
+  -moz-animation-delay: 0s;
+  -moz-animation-iteration-count: infinite;
+
+  -webkit-animation-duration: 3s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+  //-webkit-animation-timing-function: linear;
+
+  animation-duration: 0.5s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  // animation-timing-function: linear;
+}
+
+
+.btn,.form-control,.panel, input{
+    border-radius: 1px;
+    
+    &:focus,&:active {
+        outline: none !important;
+    }
+}
+.btn-success{
+    background-color: $customGreen;
+}
+
+.form-error {
+  @extend  .form-notification;
+  background: $customRed;
+  border-color: $customRed;
+}
+
+.form-success {
+  @extend  .form-notification;
+  background: $customGreen;
+  border-color: $customGreen;
+}
+
+.vcenter{
+      display: inline-block;
+    vertical-align: middle;
+    float: none;
+    text-align: center;
+}
+
+div[class^=col-]{
+  padding: 0px;
+  //height: 100%;
+}
+
+
+////////////////////// Shadow Effects //////////////////////////
+.shadow-effect-3{
+
+}
+
+.shadow-effect-4{
+
+}
+
+.shadow-effect-5{
+
+}
+
+.shadow-effect-6{
+
+}
+
+.shadow-effect-7{
+
+}
+
+
+.shadow-effect-8{
+    position:relative;
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3);
+
+    &:before, &:after{
+      content:"";
+      position:absolute; 
+      z-index:-1;
+      box-shadow:0 0 20px rgba(0,0,0,0.8);
+      top:10px;
+      bottom:10px;
+      left:0;
+      right:0;
+      border-radius:100px / 10px;
+    }
+
+    &:after{
+      right:10px; 
+      left:auto; 
+      transform:skew(8deg) rotate(3deg);
+    }
+}
+
+
+
+
+
+// .overlay{
+//   position: absolute;
+//   margin-right: auto;
+//   margin-left: auto;
+//   width: 500px;
+//   height: auto;
+// }
+

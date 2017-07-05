@@ -1,0 +1,46 @@
+
+<style>
+
+head{
+
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+body{
+  font-family: Helvetica;
+  margin: 0;
+  padding: 0;
+  background-image: url("/Volumes/PINK/bootstrap-3.3.7-dist/css/travelsite/images/city-backdrop.jpg");
+  background-size: cover;
+}
+
+h1{
+  color: #341A94;
+  height:85px;
+  margin-top: auto;
+  background-color: #4B4B4B;
+}
+
+h2 {
+    color:#000000;
+    text-align: center;
+}
+
+div {
+    background-color: #878787;
+    
+    font-size: 15px;
+    margin: auto;
+    width: 50%;
+    padding: 5px;
+}
+
+
+</style>

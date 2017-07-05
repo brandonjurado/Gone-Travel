@@ -1,0 +1,94 @@
+body{
+    font-family: Roboto;
+}
+
+.title{
+    color: #f35626;
+    background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: hue 60s infinite linear;
+
+    display: inline-block;
+    margin: auto;
+
+    font-size: 6rem;
+    line-height: 1;
+}
+
+.holder{
+    text-align: center;
+    margin-top: 250px;
+}
+
+.description{
+    font-size: 18pt;
+}
+
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
+
+.code{
+    background-color: #121212;
+    color: white;
+    font-size: 13pt;
+    padding: 5px;
+    border-radius: 0.5em;
+}
+
+.important{
+    color: #e3e658;
+}
+
+.controls{
+    margin: 10px 0 0 0;
+}
+
+.controls select{
+    border: 1px solid #c0c8c9;
+    border-radius: 4px;
+    padding: .75rem;
+    margin: .375rem;
+    background-color: transparent;
+}
+
+.controls button{
+    border: 2px solid #f35626;
+    line-height: 1.375;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-weight: 700;
+    color: #f35626;
+    cursor: pointer;
+    -webkit-animation: hue 60s infinite linear;
+    padding: .75rem;
+    margin: .375rem;
+    background-color: transparent;
+    border-radius: 4px;
+    outline: none;
+}
+
+hr{
+    border: none;
+    margin-top: 5px;
+    height: 1px;
+    background-color: #c0c8c9;
+    background-image: -webkit-linear-gradient(0deg, #fff, #c0c8c9, #fff);
+}
+
+a{
+    color: inherit;
+    text-decoration: underline;
+    -webkit-animation: hue 60s infinite linear;
+}
+
+a:hover{
+    color: #f35626;
+}

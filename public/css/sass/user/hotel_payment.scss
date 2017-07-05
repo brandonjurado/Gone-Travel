@@ -1,0 +1,62 @@
+@import "../partials/all";
+
+.hotel_payment{
+	position: relative;
+	width: 100%;
+	height: 100%;
+
+	#hotelMapInfo.container-fluid{
+		position: absolute;
+		height: 40%;
+		width: 100%;
+		padding: 0px;
+		background: lighten($customGreen, 3%);
+		color: white;
+		box-shadow: 0px -20px 200px 20px transparentize(darken($customGreen, 50%), 0.75) inset;
+		background-image: url("../../../images/general/contour-bg.png");
+		// background-size: 100% 100%;
+
+		.notification-text{
+			position: absolute;
+		  	top: 50%; left: 50%;
+		  	transform: translate(-50%,-50%);
+		  	width: 200px;
+  			height: auto;
+  			text-align: center;
+		}
+	}
+
+	#hotelBookingInfo.container-fluid{
+		position: relative;
+		top: 35%;
+		//height: 80%;
+		z-index: 9999;
+		padding: 0px;
+		width: 925px;
+		margin: 0 auto;
+
+		.form-horizontal .control-label{
+			/* text-align:right; */
+			text-align: left;
+		}
+
+		.panel{
+			height:50%;
+			margin:0px;
+
+			.panel-footer{background-color: white; 	border: none;}
+
+			#imageCarousel{
+				position: relative;
+				height: 100%;
+			}
+
+			.left.carousel-control, .right.carousel-control{
+				//position: relative;
+				height: 100%;
+			}
+		}
+		
+	}
+
+}

@@ -1,0 +1,25 @@
+{
+  "name": "knockout.animate",
+  "version": "0.1.1",
+  "authors": [
+    "Alex Bardanov"
+  ],
+  "description": "Animate.css custom binding for Knockout.js",
+  "moduleType": [
+    "amd",
+    "globals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "animate.css": "~3.2.0",
+    "knockout": "~3.2.0"
+  },
+  "keywords": ["knockout", "animate", "animations", "css", "custom", "binding"]
+}

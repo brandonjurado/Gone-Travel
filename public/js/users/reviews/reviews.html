@@ -1,0 +1,32 @@
+<section>
+    <link rel="stylesheet" href="../public/css/sass-output/user/reviews.css" />
+<link rel="stylesheet" href="../public/components/jquery-bar-rating/dist/themes/css-stars.css" />
+<div class="page-header">
+	<h1>Write Your Review.</h1>
+</div>
+<div class="page-body">
+	<div class="container-fluid">
+		<div class="panel">
+			<div class="panel-heading">
+				<h3 data-bind="text: hotelName"></h3>
+				<h5 data-bind="text: hotelLocation"></h5>
+				<div style='float: right; bottom: 5px; position: relative;'>
+					<select data-bind="value: rating" class="ratings-bar">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+				</div>
+			</div>
+			<div class="panel-body">
+				<textarea style="height: 400px; overflow-y: scroll" type="text" class="form-control"></textarea>
+			</div>
+			<div class="panel-footer">
+				<button data-bind="click: publish" class="btn btn-success">Publish Review</button>
+			</div>
+		</div>
+	</div>
+</div>
+</section>

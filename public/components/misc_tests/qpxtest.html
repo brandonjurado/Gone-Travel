@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <script src="../../components/jquery/dist/jquery.min.js"></script>
+    </head>
+<body>
+  <script>
+var searchFlights = function(){
+        console.log("searching for hotel");
+        
+//         var iataSearchFields = {
+//             "api_key": "9b004b47-dfb2-4ad3-b0ce-0f7fd71b9235",
+//             "arrival":  self.sourceAirport(),
+//             "departure": self.destinationAirport(),
+//         }
+        
+       var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://www.googleapis.com/qpxExpress/v1/trips/search?key=AIzaSyDx_zTQ-dlV30mZ1glRuZRHrqlcIaKxwJk&callback=?",
+            "method": "POST",
+            jsonp: 'myjsonpfunction',
+            "headers": {
+              "content-type": "application/json",
+              "cache-control": "no-cache",
+              "postman-token": "0dc0dcda-fd38-0489-ca95-85f97901aeb7"
+            },
+            "processData": false,
+            "data": "{\r\n  \"request\": {\r\n    \"passengers\": {\r\n      \"adultCount\": \"1\"\r\n    },\r\n    \"slice\": [\r\n      {\r\n        \"origin\": \"SFO\",\r\n        \"destination\": \"LAX\",\r\n        \"date\": \"2016-11-19\"\r\n      }\r\n    ],\r\n    \"solutions\": \"1\"\r\n  }\r\n}"
+        }
+
+        $.ajax(settings).done(function (response) {
+          console.log(response);
+        });
+    }
+</script>
+  <button onclick="searchFlights()">
+      Go
+    </button>
+</body>
+  
+</html>

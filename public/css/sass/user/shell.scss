@@ -1,0 +1,105 @@
+@import "../partials/all";
+
+div#applicationHost {
+  z-index: 0;
+  position: absolute;
+  top: 50px;
+  display: inline-flex;
+  height: 900px;
+  width: 100%;
+
+  .shell {
+    height: 100%;
+    width: 100%;
+    
+    .page-host{
+        padding: 0px;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .page-content{
+        overflow-y: auto;
+    }
+
+    .col-xs-2, .col-xs-10{
+        height: 100%;
+        padding: 0px;
+    }
+
+    nav.navbar {
+      //max-width: 300px;
+      width: 100%;
+      margin: 0px;
+      height: 100%;
+      border-radius: 0px;
+      background-color: $sidePanelBackground;
+      border-right: 1px solid $customGrey;
+    }
+
+    .navbar-collapse{padding: 0px;
+        li a:hover{
+            background-color: $customGreen;
+            color: white;
+        }
+
+        li a:active{
+            background-color: $customGreen;
+            color: white;
+        }
+    }
+
+    .navbar-brand{
+        position: relative;
+        width: 100%;
+        display: inline-flex;
+        flex-direction: row ;
+        border-bottom: 1px solid $customGrey;
+        align-items: center;
+        
+        img {
+            height: 40px;
+            width: 40px;
+            margin-right: 10px;
+            vertical-align: middle;
+            flex-grow: 0;
+        }
+        
+        p {
+            vertical-align: middle;
+            flex-grow: 2;
+            margin: 0px;
+        }
+    }
+    
+    .navbar-nav{
+        li {
+            font-size: 1.2em;
+            text-align: left;
+            
+            span.fa{
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+
+        li:hover{
+            background: $customGreen;
+        }
+    }
+    
+  
+    .navbar-nav,
+    .navbar-nav > li,
+    .navbar-left,
+    .navbar-right,
+    .navbar-header {
+      float: none !important;
+    }
+  }
+}
+
+.div[class^='col-*card']{
+    padding: 2px;
+    margin: 20px;
+}

@@ -1,0 +1,83 @@
+<section>
+<link rel="stylesheet" href="../public/css/sass-output/authentication/booking.css" />
+<script>
+  $('col-md-3').on('click', function(){
+      $('col-md-3').removeClass('selected');
+      $(this).attr('id','selected');
+  });
+</script>
+
+<div class="container" id="container">
+  <div class="container">
+    <h2>Select one of the following rooms:</h2>
+    <div class="row">
+        <div class="col-md-3">
+
+            <img class="img-responsive img-rounded" src="public/images/listing/disney-polynesian-resort.jpg" alt="Disney Polynesian resort pool">
+
+            <h4>1 Bed Suite</h4>
+        </div>
+        <div class="col-md-3">
+            <img class="img-responsive img-rounded" src="public/images/listing/disney-polynesian-resort.jpg" alt="Disney Polynesian resort pool">
+            <h4>2 Bedroom Suite</h4>
+        </div>
+        <div class="col-md-3">
+            <img class="img-responsive img-rounded" src="public/images/listing/disney-polynesian-resort.jpg" alt="Disney Polynesian resort pool">
+            <h4>Standard View</h4>
+        </div>
+        <div class="col-md-3">
+            <img class="img-responsive img-rounded" src="public/images/listing/disney-polynesian-resort.jpg" alt="Disney Polynesian resort pool">
+            <h4>Lagoon View</h4>
+        </div>
+    </div>
+    <div class="booking-form">
+      <form class="form-inline">
+        <h4>Please give us the name of one of the people staying in this room.<h4>
+          <div class="form-group">
+            <label class="sr-only">First Name</label>
+            <input type="first-name" class="form-control" id="name" placeholder="First Name">
+            <label class="sr-only" >Last Name</label>
+            <input type="last-name" class="form-control" id="name1" placeholder="Last Name">
+          </div>
+          <div>
+          <h4>What days will you be staying?</h4>
+            <div>
+              <label class="body">Check In:</label> <input type="date" name="check_in" placeholder="mm/dd/yyyy" required="">
+              <label class="body">Check Out:</label><input type="date" name="check_out" placeholder="mm/dd/yyyy" required="">
+            </div>
+          <hr>
+          <h3>Payment Information</h3>
+          <div class="form-group">
+            <label class="sr-only">First Name</label>
+            <input type="first-name" class="form-control" id="name" placeholder="First Name" required="#">
+            <label class="sr-only" for="exampleInputPassword3">Last Name</label>
+            <input type="last-name" class="form-control" id="name1" placeholder="Last Name" required="#">
+
+            <div>
+              <br>
+              <label>Card Number</label>
+              <input type="first-name" class="form-control" id="name" placeholder="Card Number" maxlength="16" required="#">
+              <label> Security Code:</label>
+              <input type="first-name" class="form-control" style="width: 50px;" id="name" placeholder="" maxlength="3" required="#">
+              <label> Experation Date:</label>
+              <input type="first-name" class="form-control" style="width: 70px;" id="name" placeholder="mm/yy" required="#">
+            </div>
+            <hr>
+            <div>
+              <h3>Special Requests</h3>
+              <p>Please include detail of your special requests (e.g. roll away beds, late check in). </p>
+              <textarea class="form-control" style="width:600px; height:100px;"rows="5" id="comment"></textarea>
+            </div>
+            <div>
+              <br>
+              <button type="button" class="btn btn-success">Reserve</button>
+            </div>
+            </div>
+          </div>
+          </div>
+      </div>
+      </form>
+    </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,107 @@
+@import "../partials/all";
+
+.flights{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-image: url("../../../images/general/buildings.png");
+    background-color: rgba(255,255,255, 0.5);
+    background-size: 100% 15em;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    
+    .flights-section{
+        //padding-top: 50px;
+        width:90%;
+    }
+    
+    .panel.search-panel{
+        box-shadow: none;
+        margin-bottom: 0px;
+        background: transparent;
+        
+        .panel-footer{
+            background: transparent;
+            min-height: 50px;
+            height: auto !important;
+            border-bottom: none;
+            
+            #flights-search-button{
+                float: right;
+            }
+        }
+    }
+
+    .tab-content{
+        padding: 10px;
+
+        #flightSearchResults{
+            height: auto;
+            width: 100%;
+
+            .list-group .list-group-item{
+                display: inline-flex;
+                width: 100%;
+                max-height: 200px;
+                padding: 5px;
+
+                &:last-child{
+                    visibility: hidden;
+                }
+
+                .airline-image{
+                    width: 60px;
+                    max-height: 100px;
+                    font-size: 2em;
+                    text-align: center;
+                        padding: 10px;
+
+                    span{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .airline-data{
+                    flex: 4;
+                    width: 100%;
+
+                    .airline-data-heading{
+                        display: inline-flex;
+                        font-size: 1.5em;
+                        margin-bottom: 15px;
+                        width: 100%;
+                        justify-content: space-evenly;
+                    }
+
+                    .flight-route{
+                        width: 100%;
+                        display: inline-flex;
+                        //justify-content: space-evenly;
+
+                        .route-arrow{
+                            width: 50px;
+                            height: 100%;
+                            color: $customGreen;
+                        }
+
+                        .origin-airport-text,.destination-airport-text{
+                            margin: 0px;
+                            //max-width: 20px;
+                            margin-left: 15px;
+                            margin-right: 15px;
+                        }
+                    }
+
+                    .airline-options{
+                        display: inline-flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

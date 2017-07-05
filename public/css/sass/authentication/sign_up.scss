@@ -1,0 +1,95 @@
+@import "../partials/all";
+body{
+    background: url("../../../images/authentication/mountains-background.jpg");
+    background-size: 100% 100%;
+}
+
+.sign-up-form{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+    max-height: 700px;
+    margin-top: 50px;
+    height: auto;
+    border-radius: 2px;
+    padding: 0px !important;
+    box-shadow: 0px 0px 5px 2px rgba(130,130,130,0.25);
+    
+    .col-xs-8,.col-xs-6,.col-xs-7{
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-right: 1px #ddd solid;
+    }
+    
+    .info-panel{
+        height: 100%;
+        height: inherit;
+        
+        img{
+            height: 150px;
+            width: 300px;
+            margin: auto;
+        }
+        
+        .info-panel-text{
+            text-align: center;
+            margin: 0px;
+            font-size: large;
+            color: darken($customGreen, 10%);
+            font-weight:900;
+        }
+    }
+    
+    .panel-heading{
+        h3{margin:3px;}
+        position: relative;
+        border-bottom: 1px solid #ddd;
+    }
+
+    
+    sup, .fa.fa-asterisk{
+        color: #dd0000;
+    }
+}
+
+
+// head{
+
+// }
+
+// a:link {
+//     text-decoration: none;
+// }
+
+// a:visited {
+//     text-decoration: none;
+// }
+
+// body{
+//   font-family: Helvetica;
+//   margin: 0;
+//   padding: 0;
+//   background-image: url("/Volumes/PINK/bootstrap-3.3.7-dist/css/travelsite/images/city-backdrop.jpg");
+//   background-size: cover;
+// }
+
+// h1{
+//   color: #341A94;
+//   height:85px;
+//   margin-top: auto;
+//   background-color: #4B4B4B;
+// }
+
+// h2 {
+//     color:#000000;
+//     text-align: center;
+// }
+
+// div {
+//     background-color: #878787;
+
+//     font-size: 15px;
+//     margin: auto;
+//     width: 50%;
+//     padding: 5px;
+// }

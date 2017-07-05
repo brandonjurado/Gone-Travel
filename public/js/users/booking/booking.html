@@ -1,0 +1,96 @@
+<section class="page-section booking">
+    <link rel="stylesheet" href="../public/css/sass-output/user/booking.css" />
+    <link rel="stylesheet" href="../public/components/jquery-bar-rating/dist/themes/css-stars.css" />
+    <div class="search-panel panel">
+        <div class="panel-body container">
+            <div class="search-form">
+                <div class="search-box-group form-group row">
+                    <div class="col-sm-11">
+                        <input data-bind="value: searchKeyword" class="form-control" type="text" id="bookingSearchBox" placeholder="Search Hotels" />
+                    </div>
+                    <div class="col-sm-1">
+                        <button data-bind="click: searchHotels" class="btn btn-success">  
+                            <span class="fa fa-search" ></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="top-content panel">
+        <ul class="nav nav-tabs">
+            <li class="nav-item active">
+                <a data-toggle="tab" data-target="#popularHotelsTab"><span class="fa fa-bullhorn"></span> Popular Hotels</a>
+            </li>
+            <li class="nav-item">
+                <a data-toggle="tab" data-target="#highestRatedHotels"><span class="fa fa-star-o"></span> Highest rated</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div id="popularHotelsTab" class="container-fluid tab-pane fade in active">
+                <div class="card-grid-holder row">
+                    <!-- cards -->
+                    <div class="cards-grid" data-bind="foreach: popularHotels">
+                      <div class="col-sm-4 center-block card">
+                          <div class="card-image">
+                              <div class="room-image">
+                                <p data-bind="text: hotelName"></p>
+                              </div>
+                          </div>
+                          <div class="card-content">
+                             <p data-bind="text: address"></p>
+                             <p data-bind="text: location"></p>
+                          </div>
+                          <div class="card-action">
+                              <a data-bind="click: function($index){openHotelPaymentsView($index)}"><span class="fa fa-book"></span> Book a room</a>
+                              <a data-bind="click: function($index){openHotelReviewsView($index)}"><span class="fa fa-pencil"></span> Write a review</a>
+<!--                               <input class="ratings-bar" data-size="xs"  data-bind="value: $data.stars" /> -->
+                              <select data-bind="value: $data.stars" class="ratings-bar">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                               </select>
+                          </div>
+                      </div>
+                    </div>
+                    <!-- end card -->
+                </div>
+            </div>
+            <div id="highestRatedHotels" class="tab-pane fade">
+               <div class="card-grid-holder row">
+                  <!-- cards -->
+                  <div class="cards-grid" data-bind="foreach: highestRated">
+                    <div class="col-sm-4 center-block card">
+                        <div class="card-image">
+                            <div class="room-image">
+                              <p data-bind="text: hotelName"></p>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                           <p data-bind="text: address"></p>
+                           <p data-bind="text: location"></p>
+                        </div>
+                        <div class="card-action">
+                            <a data-bind="click: function($index){openHotelPaymentsView($index)}"><span class="fa fa-book"></span> Book a room</a>
+                            <a data-bind="click: function($index){openHotelReviewsView($index)}"><span class="fa fa-pencil"></span> Write a review</a>
+                            <!-- <input class="ratings-bar" class="rating-loading"  data-bind="value: $data.stars" /> -->
+                            <select data-bind="value: $data.stars" class="ratings-bar">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div id="searchResults" class="tab-pane fade">
+               
+            </div>
+        </div>
+  </div>
+</section>

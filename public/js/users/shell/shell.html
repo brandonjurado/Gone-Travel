@@ -1,0 +1,42 @@
+<section class="shell">
+    <script type="text/javascript">
+       $.ajaxSetup({
+           headers: {
+               'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+           }
+       });
+    </script>
+    <link rel="stylesheet" href="../public/css/sass-output/ui/cards.css" />
+    <link rel="stylesheet" href="../public/components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.min.css" />
+    <div class="col-xs-2">
+      <nav class="navbar" role="navigation">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </button>
+              <a class="navbar-brand"><img src="../public/images/general/empty-profile.png" width="40px" height="40px"
+              /> <p data-bind="text: userName"></p></a>
+          </div>
+
+          <div class="collapse navbar-collapse navbar-ex1-collapse">
+              <ul class="nav navbar-nav" data-bind="foreach: router.navigationModel">
+                  <li data-bind="css: {active: isActive}" class="active">
+                      <a data-bind="attr: {href: hash}, html: contentHtml">
+
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+    </div>
+    <div class="page-content col-xs-10">
+        <!-- Search Modal -->
+        <div data-bind="compose:'../overlay'"></div>
+        <!-- End Search Modal -->
+        <div class="container-fluid page-host" data-bind="router: {transition: 'entrance'}">
+
+        </div>
+    </div>
+</section>

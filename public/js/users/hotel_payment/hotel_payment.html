@@ -1,0 +1,110 @@
+<section class="hotel_payment">
+    <link rel="stylesheet" href="../public/css/sass-output/user/hotel_payment.css" />
+    <link rel="stylesheet" href="../public/components/jquery-bar-rating/dist/themes/css-stars.css" />
+	<div id="hotelMapInfo" class="container-fluid">
+		<div class="notification-text">
+			<i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+			<span class="sr-only">Loading...</span>
+			<h4>Loading Map ... </h4>
+		</div>
+
+	</div>
+	<div id="hotelBookingInfo" class="container-fluid shadow-effect-8">
+		<div class="col-sm-6">
+			<div class="panel">
+				<div class="panel-heading">
+					<span data-bind="notification: {message: message, duration: 4000, hide: false}"></span>
+					<h3>Booking Summary
+					</h3>
+				</div>
+				<div class="panel-body">
+					<form class="form-horizontal">
+						<div class="form-group">
+							<label for="startDate" class="control-label col-sm-4">Start</label>
+							<div id="startDate" class="datepicker input-group date col-sm-8">
+								<input data-bind="value: startDate" class="form-control"/>
+								<div class="input-group-addon">
+                                    <span class="glyphicon glyphicon-th"></span>
+                                </div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="endDate" class="control-label col-sm-4">End</label>
+							<div id="endDate" class="datepicker input-group date col-sm-8">
+								<input data-bind="value: endDate" class="form-control"/>
+								<div class="input-group-addon">
+                                        <span class="glyphicon glyphicon-th"></span>
+                                    </div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="roomType" class="control-label col-sm-4">Room Type</label>
+							<div id="roomType" class="col-sm-8">
+								<input data-bind="value: roomType" class="form-control"/>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="fullName" class="control-label col-sm-4">Full Name</label>
+							<div id="fullName" class="col-sm-8">
+								<input data-bind="value: fullName" class="form-control"/>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="cardNumber" class="control-label col-sm-4">Card Number</label>
+							<div id="cardNumber" class="col-sm-8">
+								<input data-bind="value: cardNumber" class="form-control"/>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="expirationDate" class="control-label col-sm-4">Expiration Date</label>
+							<div id="expirationDate" class="col-sm-8">
+								<input data-bind="value: expirationDate" class="form-control"/>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="securityCode" class="control-label col-sm-4">Security Code</label>
+							<div id="securityCode" class="col-sm-8">
+								<input data-bind="value: securityCode" class="form-control"/>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="panel-footer">
+					<button class="btn btn-success" data-bind="click: makeBooking">Book Room</button>
+				</div>
+			</div>
+
+		</div>
+		<div class="col-sm-6">
+			<div class="hotel-images-panel panel">
+				<div class="panel-heading">
+					<h3 data-bind="text: hotelName">
+
+					</h3>
+					<div>
+						<select data-bind="value: stars" class="ratings-bar">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                           </select>
+					</div>
+				</div>
+				<div class="panel-body">
+					<ul class="list-group">
+						<li data-bind="html: hotelLocation" class="list-group-item"></li>
+						<li data-bind="text: address" class="list-group-item"></li>
+						<li data-bind="html: rooms" class="list-group-item"></li>
+						<li data-bind="text: price" class="list-group-item"></li>
+						<li data-bind="text: description" class="list-group-item"></li>
+					</ul>
+					<div class="button-group">
+						<a class="btn btn-link" data-bind="attr: { href: tripAdvisor }">TripAdvisor link</a>
+						<a class="btn btn-link" data-bind="attr: { href: url }">Hotel Website</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

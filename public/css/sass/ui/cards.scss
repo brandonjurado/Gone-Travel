@@ -1,0 +1,100 @@
+.card {
+    box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.12);
+    transition: box-shadow ease-in 0.25s;
+}
+
+.card:hover{
+    box-shadow: 0 20px 50px 0 rgba(0, 0, 0, 0.2), 0 2px 50px 0 rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+}
+.card-grid-holder.row{
+    margin: 0 auto;
+}
+.cards-grid{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.room-image{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../../images/general/generic-image.svg");
+    background-size: cover;
+    
+    p{
+        position: absolute;
+        left: 5px;
+        bottom: 0px;
+        color: white;
+        margin: 0px;
+        font-size: 1.2em;
+        background: rgba(51, 166, 214, 0.7);
+    }
+}
+.card {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+    max-width: 350px;
+  box-sizing: border-box;
+  border-radius: 1px;
+  width: auto;
+  //background-clip: padding-box;
+}
+.card span.card-title {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 300;
+  //text-transform: uppercase;
+}
+
+.card .card-image {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  display: block;
+}
+.card .card-image img {
+  //border-radius: 2px 2px 0 0;
+  background-clip: padding-box;
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card .card-image span.card-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 16px;
+}
+.card .card-content {
+  padding: 10px;
+  border-radius: 0 0 2px 2px;
+  background-clip: padding-box;
+  box-sizing: border-box;
+}
+.card .card-content p {
+  margin: 0;
+  color: inherit;
+}
+.card .card-content span.card-title {
+  line-height: 48px;
+}
+.card .card-action {
+  border-top: 1px solid rgba(160, 160, 160, 0.2);
+  padding: 16px;
+}
+.card .card-action a {
+  color: #ffab40;
+  margin-right: 16px;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+}
+.card .card-action a:hover {
+  color: #ffd8a6;
+  text-decoration: none;
+}

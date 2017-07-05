@@ -1,0 +1,117 @@
+<section class="flights">
+    <link rel="stylesheet" href="../public/css/sass-output/user/flights.css" />
+    <div class="flights-section container-fluid">
+        <div class="panel search-panel">
+            <div class="panel-heading">
+                <h3>Search for a flight</h3>
+            </div>
+            <div class="panel-body">
+                <form class="form-horizontal">
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="form-group  col-sm-4">
+                                <label class="control-label col-sm-2" for="email">From </label>
+                                <div class="col-sm-8">
+                                    <input data-bind="value: sourceAirport" type="email" class="form-control"  placeholder="Origin">
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label class="control-label col-sm-4" for="email">Departure Date</label>
+                                <div class="datepicker input-group date col-sm-8" data-provide="datepicker">
+                                    <input data-bind="value: departureDate" type="text" class="form-control">
+                                    <div class="input-group-addon">
+                                        <span class="glyphicon glyphicon-th"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label class="control-label col-sm-4" for="email">time</label>
+                                <div class="input-group bootstrap-timepicker timepicker col-sm-4">
+                                    <input type="text" id="departureTime" class="timepicker form-control"  placeholder="Origin">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-group  col-sm-4">
+                                <label class="control-label col-sm-2" for="email">To </label>
+                                <div class="col-sm-8">
+                                    <input data-bind="value: destinationAirport" type="email" class="form-control"  placeholder="Destination">
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label class="control-label col-sm-4" for="email">Arrival Date</label>
+                                <div class="datepicker input-group date col-sm-8" data-provide="datepicker">
+                                    <input data-bind="value: arrivalDate" type="text" class="form-control">
+                                    <div class="input-group-addon">
+                                        <span class="glyphicon glyphicon-th"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label class="control-label col-sm-4" for="email">time</label>
+                                <div class="input-group bootstrap-timepicker timepicker col-sm-4">
+                                    <input type="text" if="arrivalTime" class="timepicker form-control"  placeholder="Origin">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+               </form>
+            </div>
+            <div class="panel-footer">
+                <button data-bind="click: searchFlights" id="flights-search-button" class="btn btn-success"><span class="fa fa-search"></span> Search</button>
+            </div>
+        </div>
+    </div>
+    <div class="top-content panel">
+        <ul class="nav nav-tabs">
+            <li class="nav-item active">
+                <a data-toggle="tab" data-target="#flightSearchResults"><span class="fa fa-list"></span> Search Results</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div id="flightSearchResults" class="tab-pane in active">
+               <div class="card-grid-holder row">
+                    <!-- cards -->
+                    <div class="list-group">
+                        <div class="empty-search-message panel" data-bind="if: flights().length < 2 ">
+                            <div class="panel-body">
+                                <p class="vcenter">No results. Please search for a flight from A to B</p>
+                            </div>
+                        </div>
+                        <div class="container-fluid" data-bind="foreach: flights">
+                            <a class="list-group-item list-group-item-action">
+                                <div class="col-sm-2 vcenter airline-image">
+                                    <span class="fa fa-plane"></span>
+                                </div>
+                                <div class="col-sm-8 vcenter airline-data">
+                                    <div class="airline-data-heading">
+                                        <p data-bind="text: flightNumber" class="col-sm-3 list-group-item-text"></p>
+                                        <p data-bind="text: price" class="col-sm-9 list-group-item-text"></p>
+                                    </div>
+                                    <div class="flight-route">
+                                        <div data-bind="text: departureAirport" class="origin-airport-text list-group-item-text"></div>
+                                        <div data-bind="text: departureTerminal" class="origin-airport-text list-group-item-text"></div>
+                                        <div data-bind="text: departureTime" class="origin-airport-text list-group-item-text"></div>
+                                        <div class="route-arrow">
+                                            <span class="fa fa-arrow-right"></span>
+                                            <span class="fa fa-arrow-right"></span>
+                                            <span class="fa fa-arrow-right"></span>
+                                        </div>
+                                        <div data-bind="text: arrivalAirport" class="destination-airport-text list-group-item-text"></div>
+                                        <div data-bind="text: arrivalTerminal" class="destination-airport-text list-group-item-text"></div>
+                                        <div data-bind="text: arrivalTime" class="destination-airport-text list-group-item-text"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2 vcenter airline-options">
+                                    <button data-bind="click: function($index) {openPaymentsView($index)}, $parent.selectedFlight" class="btn btn-success">Book</button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
